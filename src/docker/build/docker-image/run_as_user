@@ -8,6 +8,14 @@ HOME_DIR=/home/seedsync
 PASSWD=/var/tmp/passwd
 GROUP=/var/tmp/group
 
+if [ ! -z "${PUID}" ]; then
+  U=$PUID
+fi
+
+if [ ! -z "${PGID}" ]; then
+  G=$PGID
+fi
+
 if [ ! -d "$HOME_DIR" ]; then
   mkdir "$HOME_DIR"
 fi
